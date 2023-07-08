@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { MainPage } from './MainPage';
+import Header from "./components/Header";
 
 const useLocalStorage = (key, defaultValue) => {
   const [state, setState] = useState(() => {
@@ -16,7 +18,7 @@ const useLocalStorage = (key, defaultValue) => {
 const App = () => {
   return (
     <div>
-
+      <MainPage />
     </div>
   );
 };

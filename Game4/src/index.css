@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.dot {
+  height: 7vw;
+  width: 7vw;
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.dot:hover {
+  background-color: cornsilk;
+}
+
+.header-title {
+  font-size: 84px;
+  font-weight: bolder;
+  margin-left: 10px;
+  line-height: 1em;
+  font-family: Garamond, serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  padding: 1vw;
+}
+
+.bButton {
+  width: 8vw;
+  height: 6vw;
+  background-color: blanchedalmond;
+  outline: 0.2vw solid brown;
+  margin-left: 12vw;
+}
+
+.bButton:hover {
+  background-color: brown;
+}
+
+.bottom-buttons {
+  position: absolute;
+  right: 2vw;
+}
+
+/** nice sky blue: #28e4fc */
