@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import "tailwindcss/tailwind.css";
 
-const Header = () => {
+const BottomButtons = ({ handleChangePage }) => {
     return (
-        <div className="bottom-buttons">
-            <button className="bButton">
-                MainPage
-            </button>
-            <button className="bButton">
+        <div className="bottom-buttons" style={{height: "6vw"}}>
+            <button className="bButton" onClick={() => handleChangePage('levels')}>
                 Levels
             </button>
-            <button className="bButton">
-                MainPage
+            <button className="bButton" onClick={() => handleChangePage('rules')}>
+                Rules
+            </button>
+            <button className="bButton" onClick={() => handleChangePage('main')}>
+                Main Page
             </button>
         </div>
     );
 };
 
-export default Header;
+export default BottomButtons;
