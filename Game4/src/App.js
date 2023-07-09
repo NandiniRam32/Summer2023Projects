@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { MainPage } from './MainPage';
-import Header from "./components/Header";
+import { LevelsPage } from './LevelsPage';
+import { RulesPage } from './RulesPage';
 
 const useLocalStorage = (key, defaultValue) => {
   const [state, setState] = useState(() => {
@@ -16,11 +17,31 @@ const useLocalStorage = (key, defaultValue) => {
 };
 
 const App = () => {
-  return (
-    <div>
-      <MainPage />
-    </div>
-  );
+  const [page, setPage] = useState('main');
+
+  const changePage = (newPage) => {
+    setPage(newPage);
+  }
+
+  if (page === 'main') {
+    return (
+      <div>
+        <MainPage handleChangePage={changePage}/>
+      </div>
+    );
+  } else if (page === 'levels') {
+    return (
+      <div>
+        <LevelsPage handleChangePage={changePage}/>
+      </div>
+    );
+  } else if (page === 'rules') {
+    return (
+      <div>
+        <RulesPage handleChangePage={changePage}/>
+      </div>
+    );
+  }
 };
 
 export default App;
