@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  padding: 50px;
+  justify-content: center;
+}
+
+.menu-button {
+  display: flex;
+  background-color: blanchedalmond;
+  height: 30px;
+  width: 250px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-color: darkgoldenrod;
+  border-style: dotted;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-button {
+  position:absolute;
+  background-color: blanchedalmond;
+  bottom: 15px;
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+  border-color: darkgoldenrod;
+  border-style: dotted;
+  align-items: center;
+}
+
+.close{
+  cursor: pointer;
+  position: absolute;
+  padding: 2px 5px;
+  right: -10px;
+  top: -10px;
+  border-radius: 19px;
+  border: 1px solid #cfcece;
+}

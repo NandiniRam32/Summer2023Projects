@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { MainMenu } from './MainMenu';
+import { GameOver } from './GameOver.jsx';
+import { GamePlay } from './GamePlay.jsx';
 
 const useLocalStorage = (key, defaultValue) => {
   const [state, setState] = useState(() => {
@@ -14,11 +17,31 @@ const useLocalStorage = (key, defaultValue) => {
 };
 
 const App = () => {
-  return (
-    <div>
+  const [page, setPage] = useState('main');
+  
+  const changePage = (newPage) => {
+    setPage(newPage);
+  }
 
-    </div>
-  );
+  if (page === 'main') {
+    return (
+      <div>
+        <MainMenu handleChangePage={changePage}/>
+      </div>
+    );
+  } else if (page === 'game') {
+    return(
+      <div>
+        <GamePlay handleChangePage={changePage}/>
+      </div>
+    );
+  } else if (page === 'badend') {
+    return (
+      <div>
+        <GameOver handleChangePage={changePage}/>
+      </div>
+    )
+  }
 };
 
 export default App;
