@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { MainPage } from './MainPage';
 import { LevelsPage } from './LevelsPage';
 import { RulesPage } from './RulesPage';
+import { PlayPage } from './PlayPage';
 
 const useLocalStorage = (key, defaultValue) => {
   const [state, setState] = useState(() => {
@@ -39,6 +40,12 @@ const App = () => {
     return (
       <div>
         <RulesPage handleChangePage={changePage}/>
+      </div>
+    );
+  } else if (page === 'play') {
+    return (
+      <div>
+        <PlayPage handleChange={changePage}/>
       </div>
     );
   }
