@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "tailwindcss/tailwind.css";
 
-const Header = () => {
+const Header = ({ handleDarkMode }) => {
     return (
-        <div style={{width: "40vw", height: "10vw"}} className="header">
+        <div className="header">
             <big className="header-title">
                 Number<br />Islands
             </big>
-            <button className="dot" style={{fontFamily: "papyrus, fantasy"}}>
+            <button className="dot" style={{fontFamily: "papyrus, fantasy"}} onClick={()=> handleDarkMode((previousDarkMode)=> 
+                !previousDarkMode)}>
                 Light/Dark Mode
             </button>
         </div>

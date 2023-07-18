@@ -3,7 +3,7 @@ import "tailwindcss/tailwind.css";
 
 const BottomButtons = ({ handleChangePage }) => {
     return (
-        <div className="bottom-buttons" style={{height: "6vw"}}>
+        <div className="bottom-buttons" style={{height: "6vw", display: "flex", justifyContent: "space-between"}}>
             <button className="bButton" onClick={() => handleChangePage('levels')}>
                 Levels
             </button>
@@ -11,7 +11,7 @@ const BottomButtons = ({ handleChangePage }) => {
                 Rules
             </button>
             <button className="bButton" onClick={() => handleChangePage('main')}>
-                Main Page
+                Main
             </button>
         </div>
     );
